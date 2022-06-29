@@ -1,0 +1,93 @@
+var HEAD_RADIUS = 70;
+var BODY_WIDTH = HEAD_RADIUS * 2;
+var BODY_HEIGHT = 120;
+var NUM_FEET = 3;
+var FOOT_RADIUS = (BODY_WIDTH) / (NUM_FEET * 2);
+var BODY_COLOR = Color.red;
+var SPACE_FOOTS = 47 ;
+var FOOT_TURN = 115 ;
+var PUPIL_RADIUS = 8;
+var PUPIL_LEFT_OFFSET = 16;
+var PUPIL_RIGHT_OFFSET = 40;
+var EYE_RADIUS = 20;
+var EYE_OFFSET = 28;
+var EYE_COLOR = Color.white;
+var PUPIL_COLOR = Color.blue;
+
+
+function start(){
+
+   var head = new Circle(70);
+   
+   var centerX = getWidth() / 2 ;
+   
+   var centerY = getHeight() /2 ;
+   
+    head.setPosition(centerX , centerY) ;
+    
+    add(head);
+    
+   var body = new Rectangle(140 , 120);
+   
+    body.setColor(Color.red) ;
+    
+    body.setPosition(centerX -  70  , centerY  ) ; 
+    
+    add( body );
+    
+   var firsteye = new Circle(EYE_RADIUS);
+   
+    firsteye.setPosition(centerX + EYE_OFFSET , centerY);
+    
+    firsteye.setColor(Color.white);
+    
+      add(firsteye)
+      
+   var secondeye = new Circle(EYE_RADIUS);
+   
+    secondeye.setPosition(centerX - EYE_OFFSET  , centerY);
+    
+    secondeye.setColor(Color.white);
+    
+      add(secondeye);
+      
+   var firstpupil = new Circle(PUPIL_RADIUS)  ;
+   
+    firstpupil.setColor(Color.blue);
+    
+    firstpupil.setPosition(centerX + PUPIL_RIGHT_OFFSET  , centerY); 
+    
+    add(firstpupil);
+    
+   var secondpupil = new Circle(PUPIL_RADIUS)  ;
+   
+    secondpupil.setColor(Color.blue);
+    
+    secondpupil.setPosition(centerX - PUPIL_LEFT_OFFSET  , centerY); 
+    
+    add(secondpupil);
+    
+   var foot = new Circle((BODY_WIDTH) /( NUM_FEET * 2)) ; 
+   
+       foot.setColor(Color.red);
+       
+       foot.setPosition(centerX  , centerY + 115 )
+       
+       add(foot)
+       
+    var foot = new Circle((BODY_WIDTH) /( NUM_FEET * 2)) ; 
+    
+       foot.setColor(Color.red);
+       
+       foot.setPosition(centerX -  SPACE_FOOTS, centerY + FOOT_TURN );
+       
+       add(foot)
+       
+       var foot = new Circle((BODY_WIDTH) /( NUM_FEET * 2)) ;
+       
+       foot.setColor(Color.red);
+       
+       foot.setPosition(centerX +  SPACE_FOOTS , centerY + FOOT_TURN ) ; 
+       
+       add(foot)   
+} 

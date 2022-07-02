@@ -1,0 +1,40 @@
+var SECRET_NUMBER = Randomizer.nextInt(0 , 100);
+var MIN = 0 ;
+var MAX = 100 ; 
+var EXIT = -1 ;
+
+function start() {
+    println('This program will play a simple guessing game');
+    println('The computer is thinking of a value between 100 to 0');
+    println('Type -1 to exit from game');
+    
+    while(true) {
+        
+    if(guessed == EXIT ){
+        println('You Left Game');
+        println('the correct number was: ' + SECRET_NUMBER);
+        break ; 
+    }
+    
+    var leavekey = -1 ;
+    var guessed = readInt('What is your guess? ');
+    
+    if (guessed > SECRET_NUMBER ){ 
+       println('your guess is too high '); 
+    } else {
+        if (guessed < SECRET_NUMBER)  {
+            println('your guess is too low ');
+        
+        }else {
+             if (guessed == SECRET_NUMBER  ) {
+        println('Correct');
+        println('Game has ended');
+        break ; 
+    }
+       
+    
+       
+            
+}
+}
+}
